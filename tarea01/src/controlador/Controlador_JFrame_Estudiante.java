@@ -37,6 +37,25 @@ public class Controlador_JFrame_Estudiante implements ActionListener{
             
         }
         
+        if(e.getActionCommand().equals("Modificar")){
+            metodos.modificarEstudiante(frm_Estudiante.obtenerCarnet(), frm_Estudiante.obtenerNombre());
+            frm_Estudiante.limpiarjTextField();
+        }
+        
+        if(e.getActionCommand().equals("Eliminar")){
+            metodos.eliminarEstudiante(frm_Estudiante.obtenerCarnet());
+            frm_Estudiante.limpiarjTextField();
+
+        }
+        
+        if(e.getActionCommand().equals("Consultar")){
+            metodos.consultarEstudiante(frm_Estudiante.obtenerCarnet());
+        }
+        
+        if(e.getActionCommand().equals("Buscar")){
+            System.out.print("hola mundo");
+        }
+        
     }
     
 }//Fin_Controlador_JFrame_Estudiante

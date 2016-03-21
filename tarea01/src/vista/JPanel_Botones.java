@@ -20,6 +20,9 @@ public class JPanel_Botones extends javax.swing.JPanel {
         initComponents();
     }
 
+    /*
+    Método que agrega eventos a los botones
+    */
     public void agregarEventosEstudiante(Controlador_JFrame_Estudiante controlador){
         
         this.controlador=controlador;

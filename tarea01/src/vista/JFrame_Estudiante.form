@@ -24,7 +24,10 @@
               <EmptySpace max="32767" attributes="0"/>
               <Component id="jPanel_Botones1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jPanel_Informacion1" min="-2" max="-2" attributes="0"/>
+              <Component id="jPanel_Informacion1" min="-2" pref="205" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel_BotonBuscar1" min="-2" pref="87" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -36,7 +39,10 @@
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel_Informacion1" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jPanel_BotonBuscar1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jPanel_Informacion1" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -46,6 +52,8 @@
     <Component class="vista.JPanel_Botones" name="jPanel_Botones1">
     </Component>
     <Component class="vista.JPanel_Informacion" name="jPanel_Informacion1">
+    </Component>
+    <Component class="vista.JPanel_BotonBuscar" name="jPanel_BotonBuscar1">
     </Component>
   </SubComponents>
 </Form>

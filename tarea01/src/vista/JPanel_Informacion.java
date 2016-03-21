@@ -42,6 +42,13 @@ public class JPanel_Informacion extends javax.swing.JPanel {
     }//Fin_obtenerCarnet
     
     /*
+    Método que obtiene el nombre del jTextField
+    */
+    public String obtenerNombre(){
+        return this.jTextField_Nombre.getText();
+    }//Fin_obtenerCarnet
+    
+    /*
     Método que devulve el nombre del estudiante
     registrado en el array
     */

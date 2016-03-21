@@ -21,6 +21,7 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
         setTitle("Registro de Estudiantes-Sistema");
         controlador = new Controlador_JFrame_Estudiante(this);
         this.jPanel_Botones1.agregarEventosEstudiante(controlador);
+        this.jPanel_BotonBuscar1.agregarEventosEstudiante(controlador);
     }
     
     /*
@@ -35,7 +36,14 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
     */
     public String obtenerCarnet(){
         return this.jPanel_Informacion1.obtenerCarnet();
-    }
+    }//Fin_obtenerCarnet
+    
+    /*
+    Método que llama otro método de JPanel_Informacion
+    */
+    public String obtenerNombre(){
+        return this.jPanel_Informacion1.obtenerNombre();
+    }//Fin_obtenerNombre
     
     /*
     Método que llama otro método de JPanel_Informacion
@@ -62,6 +70,7 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
 
         jPanel_Botones1 = new vista.JPanel_Botones();
         jPanel_Informacion1 = new vista.JPanel_Informacion();
+        jPanel_BotonBuscar1 = new vista.JPanel_BotonBuscar();
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -71,7 +80,10 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel_Botones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel_Informacion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel_Informacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel_BotonBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,7 +92,9 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
                 .addComponent(jPanel_Botones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel_Informacion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel_BotonBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel_Informacion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -89,6 +103,7 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private vista.JPanel_BotonBuscar jPanel_BotonBuscar1;
     private vista.JPanel_Botones jPanel_Botones1;
     private vista.JPanel_Informacion jPanel_Informacion1;
     // End of variables declaration//GEN-END:variables

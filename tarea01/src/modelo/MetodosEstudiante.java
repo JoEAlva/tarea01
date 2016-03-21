@@ -39,12 +39,15 @@ public class MetodosEstudiante {
     Método que modifica el nombre de un estudiante
     @param nombre nuevo nombre que va a recibir el estudiante
     */
-    public void modificarEstudiante(String nombre){
+    public void modificarEstudiante(String carnet, String nombre){
         
-        int i=0;
-        i= indiceObjeto(frm_Estudiante.obtenerCarnet());
         if(siExiste(frm_Estudiante.obtenerCarnet())){
-            arrayEstudiante.get(i).setNombre(nombre);
+            for(int i=0; i<arrayEstudiante.size(); i++){
+                int j=0;
+                j=indiceObjeto(frm_Estudiante.obtenerCarnet());
+                arrayEstudiante.get(j).setNombre(nombre);
+            }
+            
         }
         
     }//Fin_modificarEstudiante
@@ -103,8 +106,16 @@ public class MetodosEstudiante {
         if(siExiste(frm_Estudiante.obtenerCarnet())){
             frm_Estudiante.cargarNombre(arrayEstudiante.get(i).getNombre());
         }else{
-            
+            System.out.println("No existe el estudiante");
         }
-    }
+    }//Fin_consultarEsstudiante
+    
+    public String obtenerListaEstudiantes(){
+        String cadena="";
+        for(int i=0; i<arrayEstudiante.size(); i++){
+            cadena+=arrayEstudiante.get(i).getCarnet()+" "+arrayEstudiante.get(i).getNombre()+"\n";
+        }
+        return cadena;
+    }//Fin_obtenerListaEstudiantes
     
 }//Fin_MetodosEstudiante
