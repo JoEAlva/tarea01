@@ -31,6 +31,13 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
     }//Fin_devolverDatos
 
     /*
+    Método que llama otro método de JPanel_Informacion
+    */
+    public String obtenerCarnet(){
+        return this.jPanel_Informacion1.obtenerCarnet();
+    }
+    
+    /*
     Método que llama otroa método de JPanel_Informacion
     */
     public void limpiarjTextField(){

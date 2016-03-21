@@ -23,7 +23,7 @@ public class Controlador_JFrame_Estudiante implements ActionListener{
     
     public Controlador_JFrame_Estudiante(JFrame_Estudiante estudiante){ //Builder
         this.frm_Estudiante=estudiante;
-        metodos = new MetodosEstudiante();
+        metodos = new MetodosEstudiante(frm_Estudiante);
     }
     /*
     Método que se llama cuando el objeto asociado genera una acción

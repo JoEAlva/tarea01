@@ -35,6 +35,13 @@ public class JPanel_Informacion extends javax.swing.JPanel {
     }//Fin_devolverDatos
     
     /*
+    Método que obtiene el carnet del jTextField
+    */
+    public String obtenerCarnet(){
+        return this.jTextField_Carnet.getText();
+    }//Fin_obtenerCarnet
+    
+    /*
     Método que limpia los jTextField de la información
     escrito para el usuario
     */

@@ -6,6 +6,7 @@
 package modelo;
 
 import java.util.ArrayList;
+import vista.JFrame_Estudiante;
 /**
  *
  * @author JorgeIgnacio
@@ -14,11 +15,12 @@ public class MetodosEstudiante {
     
     //Se declara el array de Estudiante
     ArrayList <Estudiante> arrayEstudiante;
-    Estudiante est;
+    JFrame_Estudiante frm_Estudiante;
     
-    public MetodosEstudiante() {
+    public MetodosEstudiante(JFrame_Estudiante frm_Estudiante) {
         
         arrayEstudiante = new ArrayList<Estudiante>();
+        this.frm_Estudiante=frm_Estudiante;
         
     }
     
@@ -32,6 +34,20 @@ public class MetodosEstudiante {
         arrayEstudiante.add(temporal);       
         
     }
+    
+    /*
+    Método que modifica el nombre de un estudiante
+    @param nombre nuevo nombre que va a recibir el estudiante
+    */
+    public void modificarEstudiante(String nombre){
+        
+        int i=0;
+        i= indiceObjeto(frm_Estudiante.obtenerCarnet());
+        if(siExiste(frm_Estudiante.obtenerCarnet())){
+            
+        }
+        
+    }//Fin_modificarEstudiante
     
     /*
     Método que verifica si se encuentra registrado un
@@ -64,5 +80,9 @@ public class MetodosEstudiante {
         }
         return j;
     }//Fin_indiceObjeto
+    
+    public void eliminar(String carnet){
+        
+    }
     
 }//Fin_MetodosEstudiante
