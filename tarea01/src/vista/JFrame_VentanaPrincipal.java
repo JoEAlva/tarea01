@@ -5,17 +5,33 @@
  */
 package vista;
 
+import controlador.Controlador_JFramePrincipal;
+
 /**
  *
  * @author JorgeIgnacio
  */
 public class JFrame_VentanaPrincipal extends javax.swing.JFrame {
 
+    //Referencia
+    Controlador_JFramePrincipal controlador;
+    
     /**
      * Creates new form JFrame_VentanaPrincipal
      */
     public JFrame_VentanaPrincipal() {
         initComponents();
+        controlador = new Controlador_JFramePrincipal();
+        agregarEventosPrincipal();
+        
+    }
+    
+    /*
+    Método que agrega los eventos a los botones
+    a la ventana principal
+    */
+    public void agregarEventosPrincipal(){
+        this.jMenuItem_RegistroEstudiate.addActionListener(controlador);
     }
 
     /**
@@ -139,4 +155,5 @@ public class JFrame_VentanaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu_Registro;
     private javax.swing.JMenu jMenu_Reporte;
     // End of variables declaration//GEN-END:variables
-}
+
+}//Fin_JFrame_VentanaPrincipal

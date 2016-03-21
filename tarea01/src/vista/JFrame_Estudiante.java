@@ -15,6 +15,7 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
      * Creates new form JFrame_Estudiante
      */
     public JFrame_Estudiante() {
+        setVisible(false);
         initComponents();
     }
 
@@ -29,8 +30,6 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
 
         jPanel_Botones1 = new vista.JPanel_Botones();
         jPanel_Informacion1 = new vista.JPanel_Informacion();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
