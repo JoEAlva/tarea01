@@ -21,6 +21,7 @@ public class JFrame_VentanaPrincipal extends javax.swing.JFrame {
      */
     public JFrame_VentanaPrincipal() {
         initComponents();
+        setTitle("Universidad de  Costa Rica-Sistema");
         controlador = new Controlador_JFramePrincipal();
         agregarEventosPrincipal();
         

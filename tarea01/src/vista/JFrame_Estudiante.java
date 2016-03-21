@@ -15,7 +15,6 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
      * Creates new form JFrame_Estudiante
      */
     public JFrame_Estudiante() {
-        setVisible(false);
         initComponents();
     }
 

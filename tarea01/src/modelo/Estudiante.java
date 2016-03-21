@@ -14,8 +14,30 @@ public class Estudiante {
     String carnet;
     String nombre;
     
-    public Estudiante(String carnet, String nombre) {
-        
+    public Estudiante(String carnet, String nombre) { //Builder
+        this.carnet=carnet;
+        this.nombre=nombre;
+    }
+    
+    public String getCarnet(){ //Getter
+        return carnet;
+    }
+    
+    public void setCarnet(String carnet){ //Setter
+        this.carnet=carnet;
+    }
+    
+    public String getNombre(){ //Getter
+        return nombre;
+    }
+    
+    public void setNombre(String nombre){ //Setter
+        this.nombre=nombre;
+    }
+    
+    public String informacion()
+    {
+        return nombre+" "+carnet;
     }
     
 }//Fin_Estudiante
