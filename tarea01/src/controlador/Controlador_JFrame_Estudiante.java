@@ -7,7 +7,9 @@ package controlador;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import modelo.Estudiante;
 import vista.JFrame_Estudiante;
+import modelo.MetodosEstudiante;
 /**
  *
  * @author JorgeIgnacio
@@ -15,10 +17,13 @@ import vista.JFrame_Estudiante;
 public class Controlador_JFrame_Estudiante implements ActionListener{
     
     //Referencia
-    JFrame_Estudiante estudiante;
+    JFrame_Estudiante frm_Estudiante;
+    MetodosEstudiante metodos;
+    
     
     public Controlador_JFrame_Estudiante(JFrame_Estudiante estudiante){ //Builder
-        this.estudiante=estudiante;
+        this.frm_Estudiante=estudiante;
+        metodos = new MetodosEstudiante();
     }
     /*
     Método que se llama cuando el objeto asociado genera una acción
@@ -27,6 +32,9 @@ public class Controlador_JFrame_Estudiante implements ActionListener{
         
         if(e.getActionCommand().equals("Registro")){
             System.out.println("Presionó -Registro-");
+            metodos.registrarEstudiante(frm_Estudiante.obtenerDatos());
+            frm_Estudiante.limpiarjTextField();
+            
         }
         
     }

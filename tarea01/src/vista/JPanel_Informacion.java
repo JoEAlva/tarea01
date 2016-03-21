@@ -17,6 +17,31 @@ public class JPanel_Informacion extends javax.swing.JPanel {
     public JPanel_Informacion() {
         initComponents();
     }
+    
+    /*
+    Método que almacena la información del estudiante
+    obtenida de los jTextField en un arreglo
+    */
+    public String[] obtenerDatos(){
+        
+        String info[];
+        info= new String[2];
+        
+        info[0]=this.jTextField_Carnet.getText();
+        info[1]=this.jTextField_Nombre.getText();
+        
+        return info;
+        
+    }//Fin_devolverDatos
+    
+    /*
+    Método que limpia los jTextField de la información
+    escrito para el usuario
+    */
+    public void limpiarjTextField(){
+        this.jTextField_Carnet.setText("");
+        this.jTextField_Nombre.setText("");
+    }//Fin_limpiarjTextField
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -30,7 +55,7 @@ public class JPanel_Informacion extends javax.swing.JPanel {
         jLabel_Carnet = new javax.swing.JLabel();
         jTextField_Carnet = new javax.swing.JTextField();
         jLabel_Nombre = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextField_Nombre = new javax.swing.JTextField();
 
         setPreferredSize(new java.awt.Dimension(400, 80));
 
@@ -53,7 +78,7 @@ public class JPanel_Informacion extends javax.swing.JPanel {
                         .addGap(22, 22, 22)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jTextField_Carnet, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                    .addComponent(jTextField1))
+                    .addComponent(jTextField_Nombre))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -66,7 +91,7 @@ public class JPanel_Informacion extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_Nombre)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextField_Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -75,7 +100,7 @@ public class JPanel_Informacion extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel_Carnet;
     private javax.swing.JLabel jLabel_Nombre;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField_Carnet;
+    private javax.swing.JTextField jTextField_Nombre;
     // End of variables declaration//GEN-END:variables
 }

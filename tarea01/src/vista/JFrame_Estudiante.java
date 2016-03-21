@@ -23,8 +23,20 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
         this.jPanel_Botones1.agregarEventosEstudiante(controlador);
     }
     
-    
+    /*
+    Método que llama otro método de JPanel_Infomacion
+    */
+    public String[] obtenerDatos(){
+        return this.jPanel_Informacion1.obtenerDatos();
+    }//Fin_devolverDatos
 
+    /*
+    Método que llama otroa método de JPanel_Informacion
+    */
+    public void limpiarjTextField(){
+        this.jPanel_Informacion1.limpiarjTextField();
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
