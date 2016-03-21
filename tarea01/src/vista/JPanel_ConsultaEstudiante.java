@@ -16,6 +16,11 @@ public class JPanel_ConsultaEstudiante extends javax.swing.JPanel {
      */
     public JPanel_ConsultaEstudiante() {
         initComponents();
+        this.jTextArea_ConsultaEstudiante.setEditable(false);
+    }
+    
+    public void agregarEstudiantesjTextArea(String estudiantes){
+        this.jTextArea_ConsultaEstudiante.setText(estudiantes);
     }
 
     /**

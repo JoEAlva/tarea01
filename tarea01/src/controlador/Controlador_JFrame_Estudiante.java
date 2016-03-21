@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import modelo.Estudiante;
 import vista.JFrame_Estudiante;
+import vista.JFrame_ConsultaEstudiante;
 import modelo.MetodosEstudiante;
 /**
  *
@@ -18,11 +19,13 @@ public class Controlador_JFrame_Estudiante implements ActionListener{
     
     //Referencia
     JFrame_Estudiante frm_Estudiante;
+    JFrame_ConsultaEstudiante frm_ConsultaEstudiante;
     MetodosEstudiante metodos;
     
     
     public Controlador_JFrame_Estudiante(JFrame_Estudiante estudiante){ //Builder
         this.frm_Estudiante=estudiante;
+        frm_ConsultaEstudiante = new JFrame_ConsultaEstudiante();
         metodos = new MetodosEstudiante(frm_Estudiante);
     }
     /*
@@ -48,12 +51,13 @@ public class Controlador_JFrame_Estudiante implements ActionListener{
 
         }
         
-        if(e.getActionCommand().equals("Consultar")){
-            metodos.consultarEstudiante(frm_Estudiante.obtenerCarnet());
+        if(e.getActionCommand().equals("Buscar")){
+            metodos.consultarEstudiante(frm_Estudiante.obtenerCarnet()); 
         }
         
-        if(e.getActionCommand().equals("Buscar")){
-            System.out.print("hola mundo");
+        if(e.getActionCommand().equals("Consultar")){
+           frm_ConsultaEstudiante.setVisible(true);
+           frm_ConsultaEstudiante.agregarEstudiantesjTextArea(metodos.obtenerListaEstudiantes());
         }
         
     }
