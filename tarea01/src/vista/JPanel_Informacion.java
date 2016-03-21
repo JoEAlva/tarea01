@@ -42,6 +42,14 @@ public class JPanel_Informacion extends javax.swing.JPanel {
     }//Fin_obtenerCarnet
     
     /*
+    Método que devulve el nombre del estudiante
+    registrado en el array
+    */
+    public void cargarNombre(String nombre){
+        this.jTextField_Nombre.setText(nombre);
+    }//Fin_cargarNombre
+    
+    /*
     Método que limpia los jTextField de la información
     escrito para el usuario
     */

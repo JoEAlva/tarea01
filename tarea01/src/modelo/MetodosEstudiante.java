@@ -44,7 +44,7 @@ public class MetodosEstudiante {
         int i=0;
         i= indiceObjeto(frm_Estudiante.obtenerCarnet());
         if(siExiste(frm_Estudiante.obtenerCarnet())){
-            
+            arrayEstudiante.get(i).setNombre(nombre);
         }
         
     }//Fin_modificarEstudiante
@@ -81,8 +81,30 @@ public class MetodosEstudiante {
         return j;
     }//Fin_indiceObjeto
     
-    public void eliminar(String carnet){
-        
+    /*
+    Método que elimina un estudiante del registro
+    @param carnet identificación del estudiante    
+    */
+    public void eliminarEstudiante(String carnet){
+        int i=0;
+        i=indiceObjeto(frm_Estudiante.obtenerCarnet());
+        if(siExiste(frm_Estudiante.obtenerCarnet())){
+            arrayEstudiante.remove(i);
+        }
+    }//Fin_eliminarEstudiante
+    
+    /*
+    Método que devulve la información de un estudiante
+    en el registro
+    */
+    public void consultarEstudiante(String carnet){
+        int i=0;
+        i=indiceObjeto(frm_Estudiante.obtenerCarnet());
+        if(siExiste(frm_Estudiante.obtenerCarnet())){
+            frm_Estudiante.cargarNombre(arrayEstudiante.get(i).getNombre());
+        }else{
+            
+        }
     }
     
 }//Fin_MetodosEstudiante

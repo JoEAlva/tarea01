@@ -38,6 +38,13 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
     }
     
     /*
+    Método que llama otro método de JPanel_Informacion
+    */
+    public void cargarNombre(String nombre){
+        this.jPanel_Informacion1.cargarNombre(nombre);
+    }//Fin_cargarNombre
+    
+    /*
     Método que llama otroa método de JPanel_Informacion
     */
     public void limpiarjTextField(){
