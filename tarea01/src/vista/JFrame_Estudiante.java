@@ -5,18 +5,25 @@
  */
 package vista;
 
+import controlador.Controlador_JFrame_Estudiante;
 /**
  *
  * @author JorgeIgnacio
  */
 public class JFrame_Estudiante extends javax.swing.JFrame {
 
+    Controlador_JFrame_Estudiante controlador;
     /**
      * Creates new form JFrame_Estudiante
      */
     public JFrame_Estudiante() {
         initComponents();
+        setTitle("Registro de Estudiantes-Sistema");
+        controlador = new Controlador_JFrame_Estudiante(this);
+        this.jPanel_Botones1.agregarEventosEstudiante(controlador);
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.

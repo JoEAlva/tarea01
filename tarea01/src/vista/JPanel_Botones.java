@@ -5,12 +5,14 @@
  */
 package vista;
 
+import controlador.Controlador_JFrame_Estudiante;
 /**
  *
  * @author JorgeIgnacio
  */
 public class JPanel_Botones extends javax.swing.JPanel {
 
+    Controlador_JFrame_Estudiante controlador;
     /**
      * Creates new form JP_Botones
      */
@@ -18,6 +20,16 @@ public class JPanel_Botones extends javax.swing.JPanel {
         initComponents();
     }
 
+    public void agregarEventosEstudiante(Controlador_JFrame_Estudiante controlador){
+        
+        this.controlador=controlador;
+        
+        this.jB_RegistroEst.addActionListener(controlador);
+        this.jB_ModificarEst.addActionListener(controlador);
+        this.jB_EliminarEst.addActionListener(controlador);
+        this.jB_ConsultarEst.addActionListener(controlador);
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
