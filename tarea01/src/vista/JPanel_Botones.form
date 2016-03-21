@@ -16,24 +16,22 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jB_RegistroEst" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jB_ModificarEst" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jB_EliminarEst" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="jB_ConsultarEst" min="-2" max="-2" attributes="0"/>
-          </Group>
+          <Component id="jB_EliminarEst" alignment="0" max="32767" attributes="0"/>
+          <Component id="jB_ModificarEst" alignment="0" max="32767" attributes="0"/>
+          <Component id="jB_RegistroEst" max="32767" attributes="0"/>
+          <Component id="jB_ConsultarEst" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="103" groupAlignment="3" attributes="0">
-              <Component id="jB_RegistroEst" alignment="3" min="-2" max="-2" attributes="0"/>
-              <Component id="jB_ModificarEst" alignment="3" min="-2" max="-2" attributes="0"/>
-              <Component id="jB_EliminarEst" alignment="3" min="-2" max="-2" attributes="0"/>
-              <Component id="jB_ConsultarEst" alignment="3" min="-2" max="-2" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Component id="jB_RegistroEst" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jB_ModificarEst" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jB_EliminarEst" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jB_ConsultarEst" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
