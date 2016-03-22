@@ -20,6 +20,7 @@ public class Controlador_JFrame_Estudiante implements ActionListener{
     //Referencia
     JFrame_Estudiante frm_Estudiante;
     JFrame_ConsultaEstudiante frm_ConsultaEstudiante;
+    
     MetodosEstudiante metodos;
     
     
@@ -34,25 +35,81 @@ public class Controlador_JFrame_Estudiante implements ActionListener{
     public void actionPerformed(ActionEvent e){
         
         if(e.getActionCommand().equals("Registro")){
-            System.out.println("Presionó -Registro-");
-            metodos.registrarEstudiante(frm_Estudiante.obtenerDatos());
-            frm_Estudiante.limpiarjTextField();
             
-        }
+            if(!frm_Estudiante.obtenerCarnet().equals("")){
+                
+                if(!metodos.siExiste(frm_Estudiante.obtenerCarnet())){
+                    
+                    if(!frm_Estudiante.obtenerCarnet().equals("") && !frm_Estudiante.obtenerNombre().equals("")){
+                        
+                        metodos.registrarEstudiante(frm_Estudiante.obtenerDatos());
+                        frm_Estudiante.limpiarjTextField();
+                        metodos.mensajeProcesoExitoso();
+                        
+                    }else{
+                        
+                        metodos.mensajeFaltaUnCampo();
+                        
+                    }
+                                   
+                }else{
+                    
+                    metodos.mensajeError();
+                    frm_Estudiante.limpiarjTextField();
+                
+                }
+            }else{
+                
+                metodos.mensajeAtencion();
+                
+            }
+                       
+        }//Fin_if
         
         if(e.getActionCommand().equals("Modificar")){
-            metodos.modificarEstudiante(frm_Estudiante.obtenerCarnet(), frm_Estudiante.obtenerNombre());
-            frm_Estudiante.limpiarjTextField();
-        }
+            
+            if(metodos.siExiste(frm_Estudiante.obtenerCarnet())){
+                
+                metodos.modificarEstudiante(frm_Estudiante.obtenerCarnet(), frm_Estudiante.obtenerNombre());
+                frm_Estudiante.limpiarjTextField();
+                
+            }else{
+                
+                metodos.mensajeNoExisteEstudiante();
+                frm_Estudiante.limpiarjTextField();
+                
+            }
+            
+        }//Fin_if
         
         if(e.getActionCommand().equals("Eliminar")){
-            metodos.eliminarEstudiante(frm_Estudiante.obtenerCarnet());
-            frm_Estudiante.limpiarjTextField();
-
-        }
+            
+            if(metodos.siExiste(frm_Estudiante.obtenerCarnet())){
+                
+                metodos.eliminarEstudiante(frm_Estudiante.obtenerCarnet());
+                frm_Estudiante.limpiarjTextField();
+                
+            }else{
+                
+                metodos.mensajeNoExisteEstudiante();
+                frm_Estudiante.limpiarjTextField();
+                
+            }
+           
+        }//Fin_if
         
         if(e.getActionCommand().equals("Buscar")){
-            metodos.consultarEstudiante(frm_Estudiante.obtenerCarnet()); 
+            
+            if(!frm_Estudiante.obtenerCarnet().equals("")){
+                
+                metodos.consultarEstudiante(frm_Estudiante.obtenerCarnet()); 
+            
+            }else{
+                
+                metodos.mensajeFaltaUnCampo();
+                
+            }
+            
         }
         
         if(e.getActionCommand().equals("Consultar")){

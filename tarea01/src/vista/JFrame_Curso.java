@@ -5,60 +5,23 @@
  */
 package vista;
 
-import controlador.Controlador_JFrame_Estudiante;
 /**
  *
  * @author JorgeIgnacio
  */
-public class JFrame_Estudiante extends javax.swing.JFrame {
+public class JFrame_Curso extends javax.swing.JFrame {
 
-    Controlador_JFrame_Estudiante controlador;
     /**
-     * Creates new form JFrame_Estudiante
+     * Creates new form JFrame_Curso
      */
-    public JFrame_Estudiante() {
+    public JFrame_Curso() {
         initComponents();
-        setTitle("Registro de Estudiantes-Sistema");
-        controlador = new Controlador_JFrame_Estudiante(this);
-        this.jPanel_Botones1.agregarEventosEstudiante(controlador);
-        this.jPanel_BotonBuscar1.agregarEventosEstudiante(controlador);
     }
     
-    /*
-    Método que llama otro método de JPanel_Infomacion
-    */
-    public String[] obtenerDatos(){
-        return this.jPanel_Informacion1.obtenerDatos();
-    }//Fin_devolverDatos
+    public String[] obtenerInformacionCurso(){
+        return this.jPanel_InformacionCurso1.obtenerInformacionCurso();
+    }
 
-    /*
-    Método que llama otro método de JPanel_Informacion
-    */
-    public String obtenerCarnet(){
-        return this.jPanel_Informacion1.obtenerCarnet();
-    }//Fin_obtenerCarnet
-    
-    /*
-    Método que llama otro método de JPanel_Informacion
-    */
-    public String obtenerNombre(){
-        return this.jPanel_Informacion1.obtenerNombre();
-    }//Fin_obtenerNombre
-    
-    /*
-    Método que llama otro método de JPanel_Informacion
-    */
-    public void cargarNombre(String nombre){
-        this.jPanel_Informacion1.cargarNombre(nombre);
-    }//Fin_cargarNombre
-    
-    /*
-    Método que llama otroa método de JPanel_Informacion
-    */
-    public void limpiarjTextField(){
-        this.jPanel_Informacion1.limpiarjTextField();
-    }
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -68,22 +31,23 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel_InformacionCurso1 = new vista.JPanel_InformacionCurso();
         jPanel_Botones1 = new vista.JPanel_Botones();
-        jPanel_Informacion1 = new vista.JPanel_Informacion();
         jPanel_BotonBuscar1 = new vista.JPanel_BotonBuscar();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel_Botones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel_Informacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 205, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel_BotonBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2))
+                .addComponent(jPanel_InformacionCurso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel_BotonBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -93,18 +57,17 @@ public class JFrame_Estudiante extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel_Informacion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_BotonBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel_InformacionCurso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel_BotonBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
- 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private vista.JPanel_BotonBuscar jPanel_BotonBuscar1;
     private vista.JPanel_Botones jPanel_Botones1;
-    private vista.JPanel_Informacion jPanel_Informacion1;
+    private vista.JPanel_InformacionCurso jPanel_InformacionCurso1;
     // End of variables declaration//GEN-END:variables
 }

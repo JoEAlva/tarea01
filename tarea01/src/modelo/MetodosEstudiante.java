@@ -6,6 +6,8 @@
 package modelo;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.OK_OPTION;
 import vista.JFrame_Estudiante;
 /**
  *
@@ -17,7 +19,7 @@ public class MetodosEstudiante {
     ArrayList <Estudiante> arrayEstudiante;
     JFrame_Estudiante frm_Estudiante;
     
-    public MetodosEstudiante(JFrame_Estudiante frm_Estudiante) {
+    public MetodosEstudiante(JFrame_Estudiante frm_Estudiante) { //Builder
         
         arrayEstudiante = new ArrayList<Estudiante>();
         this.frm_Estudiante=frm_Estudiante;
@@ -105,8 +107,6 @@ public class MetodosEstudiante {
         i=indiceObjeto(frm_Estudiante.obtenerCarnet());
         if(siExiste(frm_Estudiante.obtenerCarnet())){
             frm_Estudiante.cargarNombre(arrayEstudiante.get(i).getNombre());
-        }else{
-            System.out.println("No existe el estudiante");
         }
     }//Fin_consultarEsstudiante
     
@@ -117,5 +117,40 @@ public class MetodosEstudiante {
         }
         return cadena;
     }//Fin_obtenerListaEstudiantes
+    
+    /*
+    Método que muestra un mensaje al usuario
+    */
+    public void mensajeProcesoExitoso(){
+        JOptionPane.showMessageDialog(null, "Estudiante agregado al registro.", "Registro",JOptionPane.INFORMATION_MESSAGE);
+    }//Fin_mensajeProcesoExitoso
+    
+    /*
+    Método que muestra un mensaje al usuario
+    */
+    public void mensajeError(){
+        JOptionPane.showMessageDialog(null, "El estudiante ya se encuentra matriculado.", "Error", JOptionPane.ERROR_MESSAGE);
+    }//Fin_mensajeError
+    
+    /*
+    Método que muestra un mensaje al usuario
+    */
+    public void mensajeAtencion(){
+        JOptionPane.showMessageDialog(null, "Debe ingresar primero un carnet antes de registrar.", "Atención", JOptionPane.WARNING_MESSAGE);
+    }//Fin_mensajeAtencion
+    
+    /*
+    Método que muestra un mensaje al usuario
+    */
+    public void mensajeFaltaUnCampo(){
+        JOptionPane.showMessageDialog(null, "Falta de llenar algún campo. Inténtelo de nuevo.", "Atención", JOptionPane.WARNING_MESSAGE);
+    }//Fin_mensajeAtencion
+    
+    /*
+    Método que muestra un mensaje al usuario
+    */
+    public void mensajeNoExisteEstudiante(){
+        JOptionPane.showMessageDialog(null, "El estudiante no se encuentra registrado.", "Error", JOptionPane.ERROR_MESSAGE);
+    }//Fin_mensajeError
     
 }//Fin_MetodosEstudiante

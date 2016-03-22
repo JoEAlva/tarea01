@@ -11,8 +11,8 @@ package modelo;
  */
 public class Estudiante {
     
-    String carnet;
-    String nombre;
+    private String carnet;
+    private String nombre;
     
     public Estudiante(String carnet, String nombre) { //Builder
         this.carnet=carnet;
