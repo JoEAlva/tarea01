@@ -18,9 +18,33 @@ public class JFrame_Curso extends javax.swing.JFrame {
         initComponents();
     }
     
+    /*
+    Método que llama otro método de la clases jPanel_InformacionCurso 
+    */
     public String[] obtenerInformacionCurso(){
         return this.jPanel_InformacionCurso1.obtenerInformacionCurso();
-    }
+    }//Fin obtenerInformacionCurso
+    
+    /*
+    Método que llama otro método de la clases jPanel_InformacionCurso 
+    */
+    public String obtenerSiglaCurso(){
+        return this.jPanel_InformacionCurso1.obtenerSiglaCurso();
+    }//Fin obtenerSiglaCurso
+    
+    /*
+    Método que llama otro método de la clases jPanel_InformacionCurso 
+    */
+    public String obtenerNombreCurso(){
+        return this.jPanel_InformacionCurso1.obtenerNombreCurso();
+    }//Fin obtenerNombreCurso
+    
+    /*
+    Método que llama otro método de la clases jPanel_InformacionCurso 
+    */
+    public String obtenerCreditoCurso(){
+        return this.jPanel_InformacionCurso1.obtenerSiglaCurso();
+    }//Fin obtenerCreditoCurso
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,9 +55,9 @@ public class JFrame_Curso extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel_InformacionCurso1 = new vista.JPanel_InformacionCurso();
         jPanel_Botones1 = new vista.JPanel_Botones();
         jPanel_BotonBuscar1 = new vista.JPanel_BotonBuscar();
+        jPanel_InformacionCurso1 = new vista.JPanel_InformacionCurso();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,22 +68,22 @@ public class JFrame_Curso extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel_Botones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(22, 22, 22)
                 .addComponent(jPanel_InformacionCurso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel_BotonBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel_Botones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel_BotonBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel_InformacionCurso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel_BotonBuscar1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel_Botones1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

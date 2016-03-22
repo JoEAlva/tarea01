@@ -102,7 +102,7 @@ public class Controlador_JFrame_Estudiante implements ActionListener{
             
             if(!frm_Estudiante.obtenerCarnet().equals("")){
                 
-                metodos.consultarEstudiante(frm_Estudiante.obtenerCarnet()); 
+                metodos.consultarEstudiante(); 
             
             }else{
                 

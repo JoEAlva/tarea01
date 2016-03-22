@@ -30,10 +30,47 @@ public class MetodosCurso {
         arrayCurso.add(temporal);
     }//Fin registrarCurso
     
-    public void consultarCurso(String siglaCurso){
+    /*
+    public void consultarCurso(){
         
+        if(siExisteCurso()){
+            
+        }
         
     }//Fin consultarCurso
+    
+    /*
+    
+    Método que verifca si existe un curso por medio de la sigle del curso
+    @param siglaCurso identificación del curso
+    */
+    public boolean siExisteCurso(String siglaCurso){
+        
+        boolean existe=false;
+        
+        for(int i=0; i<arrayCurso.size(); i++){   
+            if(arrayCurso.get(i).getSiglaCurso().equals(siglaCurso)){
+                existe=true;
+            }
+        }
+        
+        return existe;
+        
+    }//Fin siExisteCurso
+    
+    public int indiceCurso(String siglaCurso){
+        
+        int indice=0;
+        
+        for(int i=0; i<arrayCurso.size(); i++){
+            if(arrayCurso.get(i).getSiglaCurso().equals(siglaCurso)){
+                indice=i;
+            }
+        }
+        
+        return indice;
+        
+    }//Fin indiceCurso
     
 }//Fin MetodosCurso
 

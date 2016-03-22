@@ -34,6 +34,27 @@ public class JPanel_InformacionCurso extends javax.swing.JPanel {
         return informacion;
         
     }//Fin_obtenerInformacionCurso
+    
+    /*
+    Método que obtiene la sigla del curso del jTextField
+    */
+    public String obtenerSiglaCurso(){
+        return this.jTextField_SiglaCurso.getText();
+    }//Fin obtenerSiglaCurso
+    
+    /*
+    Método que obtiene el nombre del curso del jTextField
+    */
+    public String obtenerNombreCurso(){
+        return this.jTextField_NombreCurso.getText();
+    }//Fin obtenerNombreCurso
+    
+    /*
+    Método que obtiene la cantidad de créditos del curso del jTextField
+    */
+    public String obtenerCreditoCurso(){
+        return this.jTextField_CreditoCurso.getText();
+    }//Fin obtenerCreditoCurso
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -64,15 +85,15 @@ public class JPanel_InformacionCurso extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel_CreditoCurso)
+                    .addComponent(jLabel_CreditoCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_NombreCurso)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField_NombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTextField_CreditoCurso, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-                        .addComponent(jTextField_SiglaCurso)))
+                    .addComponent(jTextField_SiglaCurso, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jTextField_NombreCurso, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                        .addComponent(jTextField_CreditoCurso)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -80,12 +101,12 @@ public class JPanel_InformacionCurso extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField_NombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_NombreCurso))
+                    .addComponent(jLabel1)
+                    .addComponent(jTextField_SiglaCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField_SiglaCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                    .addComponent(jLabel_NombreCurso)
+                    .addComponent(jTextField_NombreCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel_CreditoCurso)

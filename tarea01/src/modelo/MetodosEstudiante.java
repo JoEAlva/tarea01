@@ -102,7 +102,7 @@ public class MetodosEstudiante {
     Método que devulve la información de un estudiante
     en el registro
     */
-    public void consultarEstudiante(String carnet){
+    public void consultarEstudiante(){
         int i=0;
         i=indiceObjeto(frm_Estudiante.obtenerCarnet());
         if(siExiste(frm_Estudiante.obtenerCarnet())){
