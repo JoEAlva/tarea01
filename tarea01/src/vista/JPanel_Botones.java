@@ -6,6 +6,7 @@
 package vista;
 
 import controlador.Controlador_JFrame_Estudiante;
+import controlador.Controlador_JFrame_Curso;
 /**
  *
  * @author JorgeIgnacio
@@ -13,6 +14,7 @@ import controlador.Controlador_JFrame_Estudiante;
 public class JPanel_Botones extends javax.swing.JPanel {
 
     Controlador_JFrame_Estudiante controlador;
+    Controlador_JFrame_Curso controladorCurso;
     /**
      * Creates new form JP_Botones
      */
@@ -31,6 +33,17 @@ public class JPanel_Botones extends javax.swing.JPanel {
         this.jB_ModificarEst.addActionListener(controlador);
         this.jB_EliminarEst.addActionListener(controlador);
         this.jB_ConsultarEst.addActionListener(controlador);
+        
+    }
+    
+    public void agregarEventosCurso(Controlador_JFrame_Curso controladorCurso){
+        
+        this.controladorCurso=controladorCurso;
+        
+        this.jB_RegistroEst.addActionListener(controladorCurso);
+        this.jB_ModificarEst.addActionListener(controladorCurso);
+        this.jB_EliminarEst.addActionListener(controladorCurso);
+        this.jB_ConsultarEst.addActionListener(controladorCurso);
         
     }
     /**

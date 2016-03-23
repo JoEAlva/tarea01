@@ -33,6 +33,7 @@ public class JFrame_VentanaPrincipal extends javax.swing.JFrame {
     */
     public void agregarEventosPrincipal(){
         this.jMenuItem_RegistroEstudiate.addActionListener(controlador);
+        this.jMenuItem_RegistroCurso.addActionListener(controlador);
     }
 
     /**

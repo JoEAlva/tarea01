@@ -8,6 +8,7 @@ package controlador;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent; 
 import vista.JFrame_Estudiante;
+import vista.JFrame_Curso;
 
 /**
  *
@@ -18,9 +19,11 @@ public class Controlador_JFramePrincipal implements ActionListener{
     
     //Referencia de JFrame_VentanaPrincipal
     JFrame_Estudiante estudiante;
+    JFrame_Curso curso;
     
     public Controlador_JFramePrincipal(){ //Builder
         estudiante = new JFrame_Estudiante();
+        curso = new JFrame_Curso();
     }
     
     /*
@@ -30,6 +33,10 @@ public class Controlador_JFramePrincipal implements ActionListener{
         
         if(e.getActionCommand().equals("Registro de Estudiantes")){
             estudiante.setVisible(true);
+        }
+        
+        if(e.getActionCommand().equals("Registro de Cursos")){
+            curso.setVisible(true);
         }
         
     }

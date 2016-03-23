@@ -5,17 +5,21 @@
  */
 package vista;
 
+import controlador.Controlador_JFrame_Curso;
 /**
  *
  * @author JorgeIgnacio
  */
 public class JFrame_Curso extends javax.swing.JFrame {
 
+    Controlador_JFrame_Curso controladorCurso;
     /**
      * Creates new form JFrame_Curso
      */
     public JFrame_Curso() {
         initComponents();
+        controladorCurso = new Controlador_JFrame_Curso(this);
+        this.jPanel_Botones1.agregarEventosCurso(controladorCurso);
     }
     
     /*
@@ -58,8 +62,6 @@ public class JFrame_Curso extends javax.swing.JFrame {
         jPanel_Botones1 = new vista.JPanel_Botones();
         jPanel_BotonBuscar1 = new vista.JPanel_BotonBuscar();
         jPanel_InformacionCurso1 = new vista.JPanel_InformacionCurso();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
