@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import vista.JFrame_Curso;
+import modelo.MetodosCurso;
 
 /**
  *
@@ -18,9 +19,11 @@ public class Controlador_JFrame_Curso implements ActionListener{
 
     //Referencia 
     JFrame_Curso curso;
+    MetodosCurso metodos;
     
     public Controlador_JFrame_Curso(JFrame_Curso curso) {
         this.curso=curso;
+        metodos = new MetodosCurso(curso);
     }
        
     public void actionPerformed(ActionEvent e){

@@ -22,6 +22,14 @@ public class JFrame_Curso extends javax.swing.JFrame {
         this.jPanel_Botones1.agregarEventosCurso(controladorCurso);
     }
     
+    
+    /*
+    Método que llama otro método de la clases jPanel_InformacionCurso 
+    */
+    public void cargarInformacionCurso(String nombreCurso, String cantidadCredito){
+        this.jPanel_InformacionCurso1.cargarInformacionCurso(nombreCurso, cantidadCredito);
+    }
+    
     /*
     Método que llama otro método de la clases jPanel_InformacionCurso 
     */

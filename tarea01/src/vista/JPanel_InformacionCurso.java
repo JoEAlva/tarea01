@@ -36,6 +36,14 @@ public class JPanel_InformacionCurso extends javax.swing.JPanel {
     }//Fin_obtenerInformacionCurso
     
     /*
+    Método que se encarga de cargar de información los campos del JPanel
+    */
+    public void cargarInformacionCurso(String nombreCurso, String cantidadCredito){
+        this.jTextField_NombreCurso.setText(nombreCurso);
+        this.jTextField_CreditoCurso.setText(cantidadCredito);
+    }//Fin cargarInformacionCurso
+    
+    /*
     Método que obtiene la sigla del curso del jTextField
     */
     public String obtenerSiglaCurso(){
