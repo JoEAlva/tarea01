@@ -19,6 +19,15 @@ public class JPanel_InformacionCurso extends javax.swing.JPanel {
     }
     
     /*
+    Método que limpia los campos
+    */
+    public void limpiarCampos(){
+        this.jTextField_SiglaCurso.setText("");
+        this.jTextField_NombreCurso.setText("");
+        this.jTextField_CreditoCurso.setText("");
+    }//Fin limpiarCampos
+    
+    /*
     Método que almacena la informacion obtenida
     de un curso en un arreglo
     */

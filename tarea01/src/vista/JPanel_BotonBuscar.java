@@ -5,6 +5,7 @@
  */
 package vista;
 
+import controlador.Controlador_JFrame_Curso;
 import controlador.Controlador_JFrame_Estudiante;
 /**
  *
@@ -13,6 +14,7 @@ import controlador.Controlador_JFrame_Estudiante;
 public class JPanel_BotonBuscar extends javax.swing.JPanel {
 
     Controlador_JFrame_Estudiante controlador;
+    Controlador_JFrame_Curso controladorCurso;
     /**
      * Creates new form JPanel_ConsultarListaEstudiantes
      */
@@ -26,6 +28,11 @@ public class JPanel_BotonBuscar extends javax.swing.JPanel {
     public void agregarEventosEstudiante(Controlador_JFrame_Estudiante controlador){
         this.controlador=controlador;
         this.jButton_Buscar.addActionListener(controlador);
+    }
+    
+    public void agregarEventosCurso(Controlador_JFrame_Curso controladorCurso){
+        this.controladorCurso=controladorCurso;
+        this.jButton_Buscar.addActionListener(controladorCurso);
     }
 
     /**

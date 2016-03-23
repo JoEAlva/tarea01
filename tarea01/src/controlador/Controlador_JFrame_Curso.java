@@ -29,23 +29,26 @@ public class Controlador_JFrame_Curso implements ActionListener{
     public void actionPerformed(ActionEvent e){
         
         if(e.getActionCommand().equals("Registro")){
-            System.out.println("Hola Mundo");
+            metodos.registrarCurso(curso.obtenerInformacionCurso());
+            curso.limpiarCampos();
         }
         
         if(e.getActionCommand().equals("Modificar")){
-            
+            metodos.modificarCurso();
+            curso.limpiarCampos();
         }
         
-        if(e.getActionCommand().equals("Eliminas")){
-            
+        if(e.getActionCommand().equals("Eliminar")){
+            metodos.eliminarCurso(curso.obtenerSiglaCurso());
+            curso.limpiarCampos();
         }
         
-        if(e.getActionCommand().equals("Buscar")){
-            
+        if(e.getActionCommand().equals("Buscar")){       
+            metodos.consultarCurso(curso.obtenerSiglaCurso());
         }
         
         if(e.getActionCommand().equals("Consultar")){
-            
+            metodos.obtenerListaCursos();
         }
         
     }//Fin Controlador_JFrame_Curso

@@ -20,8 +20,15 @@ public class JFrame_Curso extends javax.swing.JFrame {
         initComponents();
         controladorCurso = new Controlador_JFrame_Curso(this);
         this.jPanel_Botones1.agregarEventosCurso(controladorCurso);
+        this.jPanel_BotonBuscar1.agregarEventosCurso(controladorCurso);
     }
     
+    /*
+    Método que llama otro método de la clases jPanel_InformacionCurso 
+    */
+    public void limpiarCampos(){
+        this.jPanel_InformacionCurso1.limpiarCampos();
+    }
     
     /*
     Método que llama otro método de la clases jPanel_InformacionCurso 
@@ -55,7 +62,7 @@ public class JFrame_Curso extends javax.swing.JFrame {
     Método que llama otro método de la clases jPanel_InformacionCurso 
     */
     public String obtenerCreditoCurso(){
-        return this.jPanel_InformacionCurso1.obtenerSiglaCurso();
+        return this.jPanel_InformacionCurso1.obtenerCreditoCurso();
     }//Fin obtenerCreditoCurso
 
     /**
