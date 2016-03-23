@@ -6,6 +6,7 @@
 package modelo;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 import vista.JFrame_Curso;
 /**
  *
@@ -118,6 +119,41 @@ public class MetodosCurso {
         return indice;
         
     }//Fin indiceCurso
+    
+    /*
+    Método que muestra un mensaje al usuario
+    */
+    public void mensajeProcesoExitoso(){
+        JOptionPane.showMessageDialog(null, "Curso agregado al registro.", "Registro",JOptionPane.INFORMATION_MESSAGE);
+    }//Fin_mensajeProcesoExitoso
+    
+    /*
+    Método que muestra un mensaje al usuario
+    */
+    public void mensajeError(){
+        JOptionPane.showMessageDialog(null, "El curso ya se encuentra registrado.", "Error", JOptionPane.ERROR_MESSAGE);
+    }//Fin_mensajeError
+    
+    /*
+    Método que muestra un mensaje al usuario
+    */
+    public void mensajeAtencion(){
+        JOptionPane.showMessageDialog(null, "Debe ingresar primero la sigla del curso antes de registrar.", "Atención", JOptionPane.WARNING_MESSAGE);
+    }//Fin_mensajeAtencion
+    
+    /*
+    Método que muestra un mensaje al usuario
+    */
+    public void mensajeFaltaUnCampo(){
+        JOptionPane.showMessageDialog(null, "Falta de llenar algún campo. Inténtelo de nuevo.", "Atención", JOptionPane.WARNING_MESSAGE);
+    }//Fin_mensajeAtencion
+    
+    /*
+    Método que muestra un mensaje al usuario
+    */
+    public void mensajeNoExisteEstudiante(){
+        JOptionPane.showMessageDialog(null, "El curso no se encuentra registrado.", "Error", JOptionPane.ERROR_MESSAGE);
+    }//Fin_mensajeError
     
 }//Fin MetodosCurso
 
