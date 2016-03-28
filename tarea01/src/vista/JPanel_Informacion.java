@@ -79,7 +79,7 @@ public class JPanel_Informacion extends javax.swing.JPanel {
         jLabel_Nombre = new javax.swing.JLabel();
         jTextField_Nombre = new javax.swing.JTextField();
 
-        setPreferredSize(new java.awt.Dimension(400, 80));
+        setPreferredSize(new java.awt.Dimension(200, 80));
 
         jLabel_Carnet.setText("Carnet");
 

@@ -27,6 +27,7 @@ public class Controlador_JFrame_Curso implements ActionListener{
         consultaCurso = new JFrame_ConsultaCurso();
         this.curso=curso;
         metodos = new MetodosCurso(curso);
+        
     }
        
     public void actionPerformed(ActionEvent e){
@@ -40,6 +41,7 @@ public class Controlador_JFrame_Curso implements ActionListener{
                     if(!curso.obtenerSiglaCurso().equals("") && !curso.obtenerNombreCurso().equals("") && !curso.obtenerCreditoCurso().equals("")){
                         
                         metodos.registrarCurso(curso.obtenerInformacionCurso());
+                        
                         curso.limpiarCampos();
                         
                     }else{

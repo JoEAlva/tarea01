@@ -5,40 +5,24 @@
  */
 package vista;
 
-import controlador.Controlador_JFrame_Curso;
-import controlador.Controlador_JFrame_Estudiante;
 import controlador.Controlador_JFrame_MatriculaProceso;
+
 /**
  *
  * @author JorgeIgnacio
  */
-public class JPanel_BotonBuscar extends javax.swing.JPanel {
+public class JPanel_BotonMatricula extends javax.swing.JPanel {
 
-    Controlador_JFrame_Estudiante controlador;
-    Controlador_JFrame_Curso controladorCurso;
     Controlador_JFrame_MatriculaProceso controladorMatricula;
     /**
-     * Creates new form JPanel_ConsultarListaEstudiantes
+     * Creates new form JPanel_Matricular
      */
-    public JPanel_BotonBuscar() {
+    public JPanel_BotonMatricula() {
         initComponents();
     }
     
-    /*
-    Método que agrega eventos a los botones
-    */
-    public void agregarEventosEstudiante(Controlador_JFrame_Estudiante controlador){
-        this.controlador=controlador;
-        this.jButton_Buscar.addActionListener(controlador);
-    }
-    
-    public void agregarEventosCurso(Controlador_JFrame_Curso controladorCurso){
-        this.controladorCurso=controladorCurso;
-        this.jButton_Buscar.addActionListener(controladorCurso);
-    }
-    
     public void agregarEventosMatricula(Controlador_JFrame_MatriculaProceso controladorMatricula){
-        this.jButton_Buscar.addActionListener(controladorMatricula);
+        this.jButton_Matricular.addActionListener(controladorMatricula);
     }
 
     /**
@@ -50,11 +34,11 @@ public class JPanel_BotonBuscar extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton_Buscar = new javax.swing.JButton();
+        jButton_Matricular = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(90, 45));
 
-        jButton_Buscar.setText("Buscar");
+        jButton_Matricular.setText("Matricular");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -62,20 +46,20 @@ public class JPanel_BotonBuscar extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton_Buscar)
+                .addComponent(jButton_Matricular)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton_Buscar)
-                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jButton_Matricular)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton_Buscar;
+    private javax.swing.JButton jButton_Matricular;
     // End of variables declaration//GEN-END:variables
 }

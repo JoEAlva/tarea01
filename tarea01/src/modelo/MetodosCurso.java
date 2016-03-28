@@ -8,6 +8,7 @@ package modelo;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import vista.JFrame_Curso;
+import vista.JFrame_ProcesoMatricula;
 /**
  *
  * @author JorgeIgnacio
@@ -17,13 +18,16 @@ public class MetodosCurso {
     //Se declara el array de Curso
     ArrayList <Curso> arrayCurso;
     JFrame_Curso curso;
+    MetodosMatricula metodosMatricula;
     
     public MetodosCurso(JFrame_Curso curso) { //Builder
         
         arrayCurso = new ArrayList<Curso>();
         this.curso=curso;
+        metodosMatricula = new MetodosMatricula();
         
     }
+    
     
     /*
     Método que agregar un curso dentro del array
@@ -32,6 +36,8 @@ public class MetodosCurso {
     public void registrarCurso(String informacion[]){
         Curso temporal = new Curso(informacion[0], informacion[1], informacion[2]);
         arrayCurso.add(temporal);
+        
+        
     }//Fin registrarCurso
     
     /*

@@ -41,6 +41,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem_MatriculaEstudiante">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Matr&#xed;cula de Estudiantes"/>
+                <Property name="actionCommand" type="java.lang.String" value="MatriculaEstudiantes"/>
               </Properties>
             </MenuItem>
           </SubComponents>

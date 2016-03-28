@@ -34,6 +34,7 @@ public class JFrame_VentanaPrincipal extends javax.swing.JFrame {
     public void agregarEventosPrincipal(){
         this.jMenuItem_RegistroEstudiate.addActionListener(controlador);
         this.jMenuItem_RegistroCurso.addActionListener(controlador);
+        this.jMenuItem_MatriculaEstudiante.addActionListener(controlador);
     }
 
     /**
@@ -79,6 +80,7 @@ public class JFrame_VentanaPrincipal extends javax.swing.JFrame {
         jMenu_Matricula.setText("Matrícula");
 
         jMenuItem_MatriculaEstudiante.setText("Matrícula de Estudiantes");
+        jMenuItem_MatriculaEstudiante.setActionCommand("MatriculaEstudiantes");
         jMenu_Matricula.add(jMenuItem_MatriculaEstudiante);
 
         jMenuBar_VentanaPrincipal.add(jMenu_Matricula);

@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent; 
 import vista.JFrame_Estudiante;
 import vista.JFrame_Curso;
+import vista.JFrame_ProcesoMatricula;
 
 /**
  *
@@ -20,10 +21,12 @@ public class Controlador_JFramePrincipal implements ActionListener{
     //Referencia de JFrame_VentanaPrincipal
     JFrame_Estudiante estudiante;
     JFrame_Curso curso;
+    JFrame_ProcesoMatricula matricula;
     
     public Controlador_JFramePrincipal(){ //Builder
         estudiante = new JFrame_Estudiante();
         curso = new JFrame_Curso();
+        matricula = new JFrame_ProcesoMatricula();
     }
     
     /*
@@ -37,6 +40,10 @@ public class Controlador_JFramePrincipal implements ActionListener{
         
         if(e.getActionCommand().equals("Registro de Cursos")){
             curso.setVisible(true);
+        }
+        
+        if(e.getActionCommand().equals("MatriculaEstudiantes")){
+            matricula.setVisible(true);
         }
         
     }
